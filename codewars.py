@@ -65,7 +65,7 @@ def get_count(sentence):
 
 print(get_count(sentence))
 """
-
+stop = """
 legs_number = 34
 heads_number = 11
 horns_number = 6
@@ -96,3 +96,66 @@ def get_animals_count(legs_number, heads_number, horns_number):
 
 print(get_animals_count(legs_number, heads_number, horns_number))
 
+
+dna = 'GACCGCCGCC'
+def dna_to_rna(dna):
+    lister = []
+    counter1 = 0
+    counter2 = 1
+    length = len(dna)
+    while length != 0:
+        splitter = dna[counter1:counter2]
+        counter1 += 1
+        counter2 += 1
+        length -= 1
+        if splitter == "T":
+            splitter = "U"
+        lister.append(splitter)
+    full = ''.join(lister)
+    return full
+
+print(dna_to_rna(dna))
+
+
+
+
+st = "Hello there."
+def reverse(st):
+    words = st.split()
+    length = len(words)
+    lengther = len(words) -1
+    lister = []
+    lister.extend(reversed(words))
+    full = " ".join(lister)
+    return full
+
+
+print(reverse(st))
+
+string_ = "fafefifofgu"
+def disemvowel(string_):
+    lister = []
+    for char in string_:
+        if char in "aeiouAEIOU":
+            new = string_.replace(char, "")
+            string_ = new       
+    return new
+print(disemvowel(string_))
+
+length = 100
+speed = 1
+inc = 2
+
+def can_snail_reach_end(length, speed, inc): 
+    minute = 0
+    Full_len = length
+    while minute != 525600:
+        Full_len += inc
+        minute += 1
+        Full_len -= speed
+        if minute == 525600 and Full_len > 0:
+            return False
+        elif Full_len <= 0:
+            return True
+print(can_snail_reach_end(length, speed, inc))
+"""

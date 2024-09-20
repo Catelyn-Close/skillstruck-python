@@ -118,7 +118,6 @@ print(dna_to_rna(dna))
 
 
 
-
 st = "Hello there."
 def reverse(st):
     words = st.split()
@@ -141,11 +140,9 @@ def disemvowel(string_):
             string_ = new       
     return new
 print(disemvowel(string_))
-
 length = 100
 speed = 1
 inc = 2
-
 def can_snail_reach_end(length, speed, inc): 
     minute = 0
     Full_len = length
@@ -158,4 +155,93 @@ def can_snail_reach_end(length, speed, inc):
         elif Full_len <= 0:
             return True
 print(can_snail_reach_end(length, speed, inc))
+num = 9119
+def square_digits(num):
+    fixer = str(num)
+    string1 = ""
+    for number in fixer:
+        new = int(number) ** 2
+        string1 += str(new)
+    return int(string1)
+      
+
+
+print(square_digits(num))
+
+
+group = "DFK"
+def trilingual_democracy(group):
+    e = "D", "F", "K", "I"
+    f = 0
+    if group[0] == group[1] or group[1] == group[2] or group[0] == group[2]:
+        f += 2
+    sect1 = 0
+    sect2 = 0
+    sect3 = 0
+    if group[0] == group[1]:
+        sect1 += 1
+    elif group[1] == group[2]:
+        sect2 += 1
+    elif group[0] == group[2]:
+        sect3 += 1
+    if sect1 == 1 and sect2 ==0:
+        g = group[2]
+        return g
+    elif sect2 == 1 and sect3 ==0:
+        h = group[0]
+        return h
+    elif sect3 == 1 and sect1 ==0:
+        i = group[1]
+        return i
+    for char in e:
+        if char not in group and f == 0:
+            d = char
+            return d
+    a, b, c = group
+    if group == a + b + c:
+        return a
+print(trilingual_democracy(group))
+
+#add all numbers except highest and lowest
+arr = [None]
+#[1,2,6,8,10]
+def sum_array(arr):
+    list1 = arr
+    list1.sort()
+    maths = arr[1:-1]
+    ans = sum(maths)
+    if ans == None:
+        return None
+    return ans
+
+
+
+print(sum_array(arr))
 """
+#The office 11 - boredom score
+staff = 
+def boredom(staff):
+    mydict = {
+    "accounts" : 1,
+    "finance" : 2,
+    "canteen" : 10,
+    "regulation" : 3,
+    "trading" : 6,
+    "change" : 6,
+    "IS" : 8,
+    "retail" : 5,
+    "cleaning" : 4,
+    "pissing about" : 25
+    }
+    for role in staff:
+        if role in mydict:
+            number += mydict[role]
+            
+    if number > 100:
+        return "party time!!"
+    elif number <= 80:
+        return "kill me now"
+    elif number < 100 and number > 80:
+        return "I can handle this"
+
+print(boredom(staff))

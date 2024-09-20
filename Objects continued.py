@@ -1,4 +1,5 @@
 #Checkpoint
+stopper = """
 class Vacation:
     def __init__(self, place, distance, weather):
         self.place = place
@@ -30,4 +31,21 @@ thisWeekend.friend = "Shane"
 print(thisWeekend)
 print(thisWeekend.money)
 print(thisWeekend.friend)
+"""
 #challenges Shopping
+
+class Shopping:
+    def __init__(self, item, quality):
+        self.item = item
+        self.quality = quality
+        self.total = []
+    def spending(self, cost):
+        self.total.append(cost)
+    
+sportStore = Shopping("Kayak", "High Quality")
+
+sportStore.spending(101)
+sportStore.spending(120)
+sportStore.spending(1)
+
+print(sportStore.total)

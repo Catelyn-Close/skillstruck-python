@@ -217,7 +217,7 @@ def sum_array(arr):
 
 
 print(sum_array(arr))
-"""
+
 #The office 11 - boredom score
 staff = 
 def boredom(staff):
@@ -245,3 +245,44 @@ def boredom(staff):
         return "I can handle this"
 
 print(boredom(staff))
+
+args = ([1,2,3,4,5,6,7,8,9,10])
+
+
+#Last
+def last(*args):
+    return args[0]
+
+print(last(*args))
+
+
+    try:
+        return args[-1]
+    except:
+        a = len(args)
+        return args[a]
+
+print(last(args))
+
+ranger = (range(0,6))
+mather = 43
+while mather not in range(0,6):
+    mather -= 6
+    print(mather)
+    if mather in ranger:
+        break
+
+ranger = (range(0,6))
+"""
+quantity = 6
+price = 3
+counter = quantity
+counting = counter / 3
+if counting == 0:
+    quantity -= 1
+else:
+    while quantity >= 3:
+        quantity -= counting
+     
+
+        
